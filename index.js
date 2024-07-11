@@ -1,8 +1,14 @@
 //import express
 const express = require('express');
 
+//import CORS
+const cors = require('cors');
+
 //init app
 const app = express();
+
+//use cors
+app.use(cors());
 
 //define port
 const port = 3000;
