@@ -41,7 +41,7 @@ const register = async (req, res) => {
         //return response json
         res.status(201).send({
             success: true,
-            message: " Register berhasil",
+            message: "Register berhasil",
             data: user,
         });
     } catch (error) {
