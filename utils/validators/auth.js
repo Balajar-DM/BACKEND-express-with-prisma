@@ -2,7 +2,7 @@
 const { body } = require("express-validator");
 
 //import prisma
-const prisma = require("@prisma/client");
+const prisma = require("../../prisma/client");
 
 //Definisikan validasi untuk register
 const validateRegister = [
@@ -14,7 +14,7 @@ const validateRegister = [
             if (!value) {
                 throw new Error('Email is required');
             }
-            const user = await prisma.user.findUnique({ where: { email: value} });
+            const user = await prisma.user.findUnique({ where: { email: value } });
             if (user) {
                 throw new Error('Email already exists');
             }
