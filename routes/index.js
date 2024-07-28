@@ -36,5 +36,8 @@ router.post('/admin/users', verifyToken, validateUser, userController.createUser
 //define route for user by id
 router.get('/admin/users/:id', verifyToken, userController.findUserById);
 
+//define route for user create
+router.put('/admin/users/:id', verifyToken, validateUser, userController.updateUser);
+
 //export router
 module.exports = router
